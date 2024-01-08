@@ -11,7 +11,7 @@ let utcDate2 = Date.UTC(date2.getFullYear(), date2.getMonth(), date2.getDate());
 let timeDifferenceInMilliseconds = utcDate2 - utcDate1;
 let daysDifference = timeDifferenceInMilliseconds / (1000 * 60 * 60 * 24);
 
-console.log(`Difference in days: ${daysDifference}`);
+console.log(daysDifference);
 
 };
 
