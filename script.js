@@ -1,12 +1,18 @@
 var dateDiffInDays = function (date1, date2) {
   //   write your code here
-	const oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
-const firstDate = new Date(date1);
-const secondDate = new Date(date2);
+	// let date1 = new Date('2023-12-01');
+// let date2 = new Date('2023-12-10');
 
-const diffDays = Math.round((secondDate-firstDate) / oneDay);
-	
-	return diffDays;
+// Convert dates to UTC milliseconds
+let utcDate1 = Date.UTC(date1.getFullYear(), date1.getMonth(), date1.getDate());
+let utcDate2 = Date.UTC(date2.getFullYear(), date2.getMonth(), date2.getDate());
+
+// Calculate the difference in days
+let timeDifferenceInMilliseconds = utcDate2 - utcDate1;
+let daysDifference = timeDifferenceInMilliseconds / (1000 * 60 * 60 * 24);
+
+console.log(`Difference in days: ${daysDifference}`);
+
 };
 
 // Do not change the code below.
